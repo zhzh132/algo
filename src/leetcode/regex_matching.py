@@ -18,6 +18,9 @@ isMatch("aa", "a*") → true
 isMatch("aa", ".*") → true
 isMatch("ab", ".*") → true
 isMatch("aab", "c*a*b") → true
+
+http://leetcode.com/2011/09/regular-expression-matching.html
+
 """
 import unittest
 
