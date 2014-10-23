@@ -18,6 +18,10 @@ def lcsubstr(s, t):
                 count += 1
                 r += 1
             else:
+                if maxLen < count:
+                    maxLen = count
+                    pos = i
+                count = 0
                 r += 1
         if maxLen < count:
             maxLen = count
@@ -33,6 +37,7 @@ class Test(unittest.TestCase):
         self.assertEquals(lcsubstr("abc", "abc"), "abc")
         self.assertEquals(lcsubstr("bcd", "abcef"), "bc")
         self.assertEquals(lcsubstr("abc", "def"), "")
+        self.assertEquals(lcsubstr("abacdfgdcaba", "abacdgfdcaba"), "abacd")
 
 
 if __name__ == "__main__":
